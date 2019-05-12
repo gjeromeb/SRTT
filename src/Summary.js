@@ -53,6 +53,13 @@ class Summary extends Table {
 			numeral(expected.crystal / current.max).format(pc_format),
 			"expected",
 		]);
+		this.appendBottomRow([
+			"AS Limit",
+			numeral(current.max).format(),
+			numeral(current.max).format(),
+			numeral(current.max).format(),
+			"Capacity",
+		]);
 	}
 }
 
