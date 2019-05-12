@@ -1,4 +1,4 @@
-const storage = require('./storage');
+const storage = require('./storage.js');
 const EventEmitter = require('events');
 
 class BaseCommand extends EventEmitter {
