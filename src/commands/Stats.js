@@ -32,7 +32,7 @@ class Stats extends BaseCommand {
 				v.unshift(1+i);
 				return v;
 			});
-			values = values.slice(0, 10);
+			//values = values.slice(0, 10);
 			let tbl = new Table(values);
 			tbl.options.columns = {
 				0: { alignment: "right", paddingLeft: 0 },
@@ -44,7 +44,7 @@ class Stats extends BaseCommand {
 			},
 			tbl.setHeader(['#','Player','Total','Metal','Gas','Crystal']);
 			tbl.formatter = v => "string" === typeof v ? v : numeral(v).format();
-			message.channel.send("Current Top 10 Players:```" + tbl.display() + "```");
+			message.channel.send("Current Top Players:```" + tbl.display() + "```");
 		});
 	}
 }
